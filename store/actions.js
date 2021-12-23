@@ -1,4 +1,6 @@
-export const actions = {
+import axios from 'axios'
+
+const actions = {
     GET_TODAY({ commit }) {
         axios.post('https://aztro.sameerkumar.website/?sign=aries&day=today')
         .then(response => {

@@ -54,7 +54,7 @@
             </option>
           </select>
 
-        <p class="fadeIn pt-12 text-xl font-semibold text-white">The end</p>
+        <p class="fadeIn pt-12 text-xl font-semibold text-white">Your sign is: {{ this.$store.state.sign }}</p>
       </div>
     </div>
   </div>
@@ -62,6 +62,7 @@
 
 <script>
 import lax from 'lax.js'
+import { mapState } from 'vuex'
 
 export default {
   mounted() {
@@ -169,58 +170,14 @@ export default {
     )
   },
   data() {
-    return {
-      signs: [
-        {
-          id: 0,
-          name: 'Aries'
-        },
-        {
-          id: 1,
-          name: 'Taurus'
-        },
-        {
-          id: 2,
-          name: 'Gemini'
-        },
-        {
-          id: 3,
-          name: 'Cancer'
-        },
-        {
-          id: 4,
-          name: 'Leo'
-        },
-        {
-          id: 5,
-          name: 'Virgo'
-        },
-        {
-          id: 6,
-          name: 'Libra'
-        },
-        {
-          id: 7,
-          name: 'Scorpio'
-        },
-        {
-          id: 8,
-          name: 'Sagittarius'
-        },
-        {
-          id: 9,
-          name: 'Capricorn'
-        },
-        {
-          id: 10,
-          name: 'Aquarius'
-        },
-        {
-          id: 11,
-          name: 'Pisces'
-        }
-      ]
-    }
+    return {}
+  },
+  computed: {
+    ...mapState([
+      'sign',
+      'signs',
+      'today'
+    ])
   }
 }
 </script>
