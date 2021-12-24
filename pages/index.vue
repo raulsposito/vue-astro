@@ -49,7 +49,7 @@
             name="sign"
             class="mt-1 block w-full py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
           >
-            <option v-for="s in signs" :key="s.id" :value="s.id">
+            <option v-for="s in this.signs" :key="s.id" :value="s.id">
               {{ s.name }}
             </option>
           </select>
@@ -170,12 +170,62 @@ export default {
     )
   },
   data() {
-    return {}
+    return {
+      signs: [
+        {
+          id: 0,
+          name: 'Aries'
+        },
+        {
+          id: 1,
+          name: 'Taurus'
+        },
+        {
+          id: 2,
+          name: 'Gemini'
+        },
+        {
+          id: 3,
+          name: 'Cancer'
+        },
+        {
+          id: 4,
+          name: 'Leo'
+        },
+        {
+          id: 5,
+          name: 'Virgo'
+        },
+        {
+          id: 6,
+          name: 'Libra'
+        },
+        {
+          id: 7,
+          name: 'Scorpio'
+        },
+        {
+          id: 8,
+          name: 'Sagittarius'
+        },
+        {
+          id: 9,
+          name: 'Capricorn'
+        },
+        {
+          id: 10,
+          name: 'Aquarius'
+        },
+        {
+          id: 11,
+          name: 'Pisces'
+        }
+      ],
+    }
   },
   computed: {
     ...mapState([
       'sign',
-      'signs',
       'today'
     ])
   }
