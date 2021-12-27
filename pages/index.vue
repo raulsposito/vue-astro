@@ -45,9 +45,10 @@
         <p class="downarrows pt-12 text-xl font-semibold text-white">☆</p> -->
           <select
             id="sign"
+            v-if="!this.isReading"
             v-model="selected"
             name="sign"
-            class="mt-12 block w-full py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+            class="mt-12 block w-full py-2 text-base border-gray-300 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm rounded-md"
           >
             <option disabled value="">Please select your sign</option>
             <option>Aries</option>
@@ -64,24 +65,37 @@
             <option>Pisces</option>
           </select>
 
-        <p class="fadeIn pt-12 text-xl font-semibold text-white">Your sign is: {{ this.sign }}</p>
+        <p v-if="!this.isReading" class="fadeIn pt-12 text-xl font-semibold text-white">Your sign is: {{ this.sign }}</p>
 
         <button
           type="button"
+          v-if="!this.isReading"
           v-on:click="getToday"
-          class="mt-12 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          class="mt-12 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
         >
           ☆ Get Today's Horoscope ☆
         </button>
 
-        <p v-if="this.isReading" class="fadeIn pt-12 text-xl font-semibold text-white">{{ this.sign }} Date Ranges: {{ this.today.date_range }}</p>
-        <p v-if="this.isReading" class="fadeIn pt-12 text-xl font-semibold text-white">Today's Date: {{ this.today.current_date }}</p>
-        <p v-if="this.isReading" class="fadeIn pt-12 text-xl font-semibold text-white">Today's Mood for {{ this.sign }}: {{ this.today.mood }}</p>
-        <p v-if="this.isReading" class="fadeIn pt-12 text-xl font-semibold text-white">Today's Color for {{ this.sign }}: {{ this.today.color }}</p>
-        <p v-if="this.isReading" class="fadeIn pt-12 text-xl font-semibold text-white">Today's Lucky Number for {{ this.sign }}: {{ this.today.lucky_number }}</p>
-        <p v-if="this.isReading" class="fadeIn pt-12 text-xl font-semibold text-white">Today's Lucky Time: {{ this.today.lucky_time }}</p>
-        <p v-if="this.isReading" class="fadeIn pt-12 text-xl font-semibold text-white">Today's Sign Compatibility: {{ this.today.compatibility }}</p>
-        <p v-if="this.isReading" class="fadeIn pt-12 text-xl font-semibold text-white">Today's Reading for {{ this.sign }}: {{ this.today.description }}</p>
+        <div v-if="this.isReading" >
+          <p class="fadeIn pt-12 text-xl font-semibold text-white">{{ this.sign }} Date Ranges: {{ this.today.date_range }}</p>
+          <p class="fadeIn pt-12 text-xl font-semibold text-white">Today's Date: {{ this.today.current_date }}</p>
+          <p class="fadeIn pt-12 text-xl font-semibold text-white">Today's Mood for {{ this.sign }}: {{ this.today.mood }}</p>
+          <p class="fadeIn pt-12 text-xl font-semibold text-white">Today's Color for {{ this.sign }}: {{ this.today.color }}</p>
+          <p class="fadeIn pt-12 text-xl font-semibold text-white">Today's Lucky Number for {{ this.sign }}: {{ this.today.lucky_number }}</p>
+          <p class="fadeIn pt-12 text-xl font-semibold text-white">Today's Lucky Time: {{ this.today.lucky_time }}</p>
+          <p class="fadeIn pt-12 text-xl font-semibold text-white">Today's Sign Compatibility: {{ this.today.compatibility }}</p>
+          <p class="fadeIn pt-12 text-xl font-semibold text-white">Today's Reading for {{ this.sign }}: {{ this.today.description }}</p>
+        </div>
+
+        <button
+          type="button"
+          v-if="this.isReading"
+          v-on:click="reset"
+          class="mt-12 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+        >
+          ☽ ☆ Ask Another Sign ☆ ☾
+        </button>
+
       </div>
     </div>
   </div>
@@ -216,9 +230,11 @@ export default {
   },
   methods: {
     getToday() {
-      console.log('Im clicked!')
       this.$store.dispatch('app/GET_TODAY')
       this.isReading = true
+    },
+    reset() {
+      this.isReading = false
     }
   }
 }
