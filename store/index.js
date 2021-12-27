@@ -5,7 +5,7 @@ import * as app from './modules/app/index'
 
 Vue.use (Vuex)
 
-export default new Vuex.Store({
+export default () => new Vuex.Store({
     modules: {
         app
     }
