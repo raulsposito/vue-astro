@@ -18,9 +18,9 @@ export const mutations = {
 
 export const actions = {
     GET_TODAY({ commit }) {
-        axios.post('https://aztro.sameerkumar.website/?sign=aries&day=today')
+        axios.post(`https://aztro.sameerkumar.website/?sign=${state.sign}&day=today`)
         .then(response => {
-            commit('app/SET_TODAY', response.data)
+            commit('SET_TODAY', response.data)
         })
     }
 }
