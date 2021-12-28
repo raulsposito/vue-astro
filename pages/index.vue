@@ -14,8 +14,6 @@
       <div class="text-center py-20">
         <h2
           class="
-            fadeOut
-            scrolldown
             text-4xl
             tracking-tight
             font-extrabold
@@ -47,7 +45,7 @@
             <option>Pisces</option>
           </select>
 
-        <p v-if="!this.isReading" class="fadeIn pt-12 text-xl font-semibold text-white">Your sign is: {{ this.sign }}</p>
+        <p v-if="!this.isReading" class="pt-12 text-xl font-semibold text-white">Your sign is: {{ this.sign }}</p>
 
         <button
           type="button"
@@ -59,14 +57,14 @@
         </button>
 
         <div v-if="this.isReading" >
-          <p class="fadeIn pt-12 text-xl font-semibold text-white">{{ this.sign }} Date Ranges: {{ this.today.date_range }}</p>
-          <p class="fadeIn pt-12 text-xl font-semibold text-white">Today's Date: {{ this.today.current_date }}</p>
-          <p class="fadeIn pt-12 text-xl font-semibold text-white">Today's Mood for {{ this.sign }}: {{ this.today.mood }}</p>
-          <p class="fadeIn pt-12 text-xl font-semibold text-white">Today's Color for {{ this.sign }}: {{ this.today.color }}</p>
-          <p class="fadeIn pt-12 text-xl font-semibold text-white">Today's Lucky Number for {{ this.sign }}: {{ this.today.lucky_number }}</p>
-          <p class="fadeIn pt-12 text-xl font-semibold text-white">Today's Lucky Time: {{ this.today.lucky_time }}</p>
-          <p class="fadeIn pt-12 text-xl font-semibold text-white">Today's Sign Compatibility: {{ this.today.compatibility }}</p>
-          <p class="fadeIn pt-12 text-xl font-semibold text-white">Today's Reading for {{ this.sign }}: {{ this.today.description }}</p>
+          <p class="pt-12 text-xl font-semibold text-white">{{ this.sign }} Date Ranges: {{ this.today.date_range }}</p>
+          <p class="pt-12 text-xl font-semibold text-white">Today's Date: {{ this.today.current_date }}</p>
+          <p class="pt-12 text-xl font-semibold text-white">Today's Mood for {{ this.sign }}: {{ this.today.mood }}</p>
+          <p class="pt-12 text-xl font-semibold text-white">Today's Color for {{ this.sign }}: {{ this.today.color }}</p>
+          <p class="pt-12 text-xl font-semibold text-white">Today's Lucky Number for {{ this.sign }}: {{ this.today.lucky_number }}</p>
+          <p class="pt-12 text-xl font-semibold text-white">Today's Lucky Time: {{ this.today.lucky_time }}</p>
+          <p class="pt-12 text-xl font-semibold text-white">Today's Sign Compatibility: {{ this.today.compatibility }}</p>
+          <p class="pt-12 text-xl font-semibold text-white">Today's Reading for {{ this.sign }}: {{ this.today.description }}</p>
         </div>
 
         <button
