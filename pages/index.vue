@@ -1,6 +1,7 @@
 <template>
-    <div
+  <div
     class="
+      video
       relative
       bg-black
       pt-16
@@ -115,3 +116,12 @@ export default {
   }
 }
 </script>
+
+<style>
+.video {
+  /* background-image: url(https://media3.giphy.com/media/eHdZZgmLheaqRT6kVX/giphy.gif?cid=ecf05e47o5hrabzauwf67axvz6lloxm7281jjlbvybgqaifm&rid=giphy.gif&ct=g); */
+  background-image: url(https://media4.giphy.com/media/hXv4LngASTk8o/giphy.gif?cid=790b7611b5d57084fdba408839d3085fe40f0810b93ba17f&rid=giphy.gif&ct=g);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
