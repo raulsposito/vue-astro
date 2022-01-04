@@ -109,6 +109,11 @@ export default {
     getToday() {
       this.$store.dispatch('app/GET_TODAY')
       this.isReading = true
+      this.$gtag.event('latest-horoscope-click', {
+        'event_category': 'click',
+        'event_label': 'Latest Horoscope Button Click',
+        'value': 1
+      })
     },
     reset() {
       this.isReading = false
