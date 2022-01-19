@@ -85,6 +85,12 @@
 
 <script>
 import { mapState } from 'vuex'
+import VueGtag from 'vue-gtag'
+
+Vue.use(VueGtag, {
+  config: { id: "298201286" },
+  globalObjectName: 'vue_astro',
+})
 
 export default {
   data() {
@@ -107,6 +113,10 @@ export default {
   },
   methods: {
     getToday() {
+      this.VueGtag.event('Get Horoscope', {
+        'event_category': "Vue Astro",
+        'event_label': window.location.origin
+      }),
       this.$store.dispatch('app/GET_TODAY')
       this.isReading = true
       this.$gtag.event('latest-horoscope-click', {
