@@ -113,14 +113,10 @@ export default {
   },
   methods: {
     getToday() {
-      this.VueGtag.event('Get Horoscope', {
-        'event_category': "Vue Astro",
-        'event_label': window.location.origin
-      }),
       this.$store.dispatch('app/GET_TODAY')
       this.isReading = true
-      this.$gtag.event('latest-horoscope-click', {
-        'event_category': 'click',
+      this.$VueGtag.event('latest-horoscope-click', {
+        'event_category': 'Vue Astro',
         'event_label': 'Latest Horoscope Button Click',
         'value': 1
       })
