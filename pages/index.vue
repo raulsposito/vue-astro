@@ -109,7 +109,7 @@ export default {
     getToday() {
       this.$store.dispatch('app/GET_TODAY')
       this.isReading = true
-      this.$VueGtag.event('latest-horoscope-click', {
+      this.$VueGtag?.event('latest-horoscope-click', {
         'event_category': 'Vue Astro',
         'event_label': 'Latest Horoscope Button Click',
         'value': 1

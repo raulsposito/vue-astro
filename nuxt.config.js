@@ -43,7 +43,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // { src: '/plugins/vue-gtag', }
+    // { src: '/plugins/vue-gtag.js', }
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
