@@ -85,12 +85,6 @@
 
 <script>
 import { mapState } from 'vuex'
-import VueGtag from 'vue-gtag'
-
-Vue.use(VueGtag, {
-  config: { id: "298201286" },
-  globalObjectName: 'vue_astro',
-})
 
 export default {
   data() {
