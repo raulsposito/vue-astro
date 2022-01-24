@@ -18,8 +18,8 @@ export default {
       { hid: 'og-desc', property: 'og:description', content: 'Get your horoscope for today!' },
       { hid: 'og-image', property: 'og:image', content: 'https://media4.giphy.com/media/hXv4LngASTk8o/giphy.gif?cid=790b7611b5d57084fdba408839d3085fe40f0810b93ba17f&rid=giphy.gif&ct=g'},
       { hid: 'og-url', property: 'og:url', content: 'https://vue-astro.netlify.app/' },
-      { hid: 'twitter:card', name: 'twitter:card', content: 'https://media4.giphy.com/media/hXv4LngASTk8o/giphy.gif?cid=790b7611b5d57084fdba408839d3085fe40f0810b93ba17f&rid=giphy.gif&ct=g' },
-      { hid: 'twitter:site', name: 'twitter:site', content: '@raul_sposito' }
+      { hid: 'twitter:card', content: 'Vue Astro. Get your horoscope for today!' },
+      { hid: 'twitter:creator', content: '@raul_sposito' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
