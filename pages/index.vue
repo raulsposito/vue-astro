@@ -51,7 +51,7 @@
         <button
           type="button"
           v-if="!this.isReading"
-          v-on:click="getToday"
+          @click="getToday"
           class="mt-12 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
         >
           ☆ Get Today's Horoscope ☆
@@ -71,7 +71,7 @@
         <button
           type="button"
           v-if="this.isReading"
-          v-on:click="reset"
+          @click="reset"
           class="mt-12 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
         >
           ☽ ☆ Ask Another Sign ☆ ☾
@@ -109,11 +109,9 @@ export default {
     getToday() {
       this.$store.dispatch('app/GET_TODAY')
       this.isReading = true
-      this.$VueGtag?.event('latest-horoscope-click', {
+      this.$gtag?.event('Get Horoscope!', {
         'event_category': 'Vue Astro',
-        'event_label': 'Latest Horoscope Button Click',
-        'value': 1
-      })
+        'event_label': 'Latest Horoscope Button Click' })
     },
     reset() {
       this.isReading = false
