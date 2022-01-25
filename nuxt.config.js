@@ -14,7 +14,7 @@ export default {
       { hid: 'og-type', property: 'og:type', content: 'website' },
       { hid: 'og-title', property: 'og:title', content: 'Vue Astro' },
       { hid: 'og-desc', property: 'og:description', content: 'Get your horoscope for today!' },
-      { hid: 'og-image', property: 'og:image', content: 'https://media4.giphy.com/media/' },
+      { hid: 'og-image', property: 'og:image', content: 'https://media4.giphy.com/media/hXv4LngASTk8o/giphy.gif?cid=790b7611b5d57084fdba408839d3085fe40f0810b93ba17f&rid=giphy.gif&ct=g'},
       { hid: 'og-image-alt', property: 'og:image:alt', content: 'An image of the great pyramids with a cosmic flashing background' },
       { hid: 'og-url', property: 'og:url', content: 'https://vue-astro.netlify.app/' },
       { property: 'fb:app_id', content: '4731159123588293' },
