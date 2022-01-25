@@ -1,8 +1,6 @@
 export default {
-  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'vue-astro',
     htmlAttrs: {
@@ -16,8 +14,10 @@ export default {
       { hid: 'og-type', property: 'og:type', content: 'website' },
       { hid: 'og-title', property: 'og:title', content: 'Vue Astro' },
       { hid: 'og-desc', property: 'og:description', content: 'Get your horoscope for today!' },
-      { hid: 'og-image', property: 'og:image', content: 'https://media4.giphy.com/media/hXv4LngASTk8o/giphy.gif?cid=790b7611b5d57084fdba408839d3085fe40f0810b93ba17f&rid=giphy.gif&ct=g'},
+      { hid: 'og-image', property: 'og:image', content: 'https://media4.giphy.com/media/' },
+      { hid: 'og-image', property: 'og:image:alt', content: 'An image of the great pyramids with a cosmic flashing background' },
       { hid: 'og-url', property: 'og:url', content: 'https://vue-astro.netlify.app/' },
+      { property: 'fb:app_id', content: '4731159123588293' },
       { hid: 'twitter:card', content: 'Vue Astro. Get your horoscope for today!' },
       { hid: 'twitter:creator', content: '@raul_sposito' }
     ],
