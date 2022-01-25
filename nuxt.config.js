@@ -19,7 +19,8 @@ export default {
       { hid: 'og-url', property: 'og:url', content: 'https://vue-astro.netlify.app/' },
       { property: 'fb:app_id', content: '4731159123588293' },
       { hid: 'twitter:card', content: 'Vue Astro. Get your horoscope for today!' },
-      { hid: 'twitter:creator', content: '@raul_sposito' }
+      { hid: 'twitter:creator', content: '@raul_sposito' },
+      { hid: 'twitter:image:alt', content: 'An image of the great pyramids with a cosmic flashing background' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
