@@ -4,6 +4,8 @@ This is an Open Source / Educational project
 
 See [Deployed Version](https://vue-astro.netlify.app/)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6833f5f9-16a5-4bb7-afcb-89b2fe21e720/deploy-status)](https://app.netlify.com/sites/vue-astro/deploys)
+
 ## Build Setup
 
 ```bash
