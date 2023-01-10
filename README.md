@@ -1,5 +1,9 @@
 # vue-astro
 
+This is an Open Source / Educational project
+
+See [Deployed Version](https://vue-astro.netlify.app/)
+
 ## Build Setup
 
 ```bash
